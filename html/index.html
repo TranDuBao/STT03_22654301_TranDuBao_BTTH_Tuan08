@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .mauDo{
+        color: red;
+    }
+</style>
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-12">
+                <img src="/img/anh1.png" alt="" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar">
+                <ul class="nav nav-navbar nav-expend">
+                    <li class="nav-item"><a href="#" class="nav-link">Trang Chu</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" id="btnDK">Dang Ky</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Tro Giup</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <table class="table table-hover table-striped table-primary table-light table-bordered" id="tbDanhSach">
+                <tr>
+                    <th>STT</th>
+                    <th>MSSV</th>
+                    <th>Ho Ten</th>
+                    <th>Email</th>
+                    <th>Tien dich vu</th>
+                    <th>Tien do dung</th>
+                    <th>Tong tien</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>22654301</td>
+                    <td>Tran Du Bao</td>
+                    <td>dubao1005@gmail.com</td>
+                    <td>30000</td>
+                    <td>2000</td>
+                    <td>32000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5>THONG TIN THANH TOAN</h5>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <div class="row form-group p-1">
+                                    <div class="col-3 col-sm-3">
+                                        <label for="">Ma So:</label>
+                                    </div>
+                                    <div class="col-3 col-sm-6">
+                                        <input type="text" placeholder="22123456" class="form-control" id="txtMa">
+                                    </div>
+                                    <div class="col-3 col-sm-3 p-2">
+                                        <span id="tbMa">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group p-1">
+                                    <div class="col-3 col-sm-3">
+                                        <label for="">Ho Ten:</label>
+                                    </div>
+                                    <div class="col-6 col-sm-6">
+                                        <input type="text" placeholder="Tran Du Bao" class="form-control" id="txtHT">
+                                    </div>
+                                    <div class="col-3 col-sm-3 p-2">
+                                        <span id="tbHT">*</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row form-group p-1">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Email:</label>
+                                    </div>
+                                    <div class="col-6 col-sm-6">
+                                        <input type="text" placeholder="dubao@gmail.com" class="form-control" id="txtDC">
+                                    </div>
+                                    <div class="col-3 col-sm-3 p-2">
+                                        <span id="tbDC">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Do Dung:</label>
+                                    </div>
+                                    <div class="col-6 col-sm-6">
+                                        <select name="gia" class="form-control" id="slGia">
+                                            <option value="2000">Boi</option>
+                                            <option value="3000">Truot Van</option>
+                                            <option value="4000">Moto Nuoc</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Gia tien:</label>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <input type="text" id="txtDV" class="form-control" name="txtDV" disabled>
+                                    </div>
+                                </div>
+                                <div class="row p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Dich Vu</label>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <input type="checkbox" class="chkDoDung" value="20000" name="chkDoDung">Ao quan boi
+                                    </div>
+                                </div>
+                                <div class="row p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <input type="checkbox" class="chkDoDung" name="chkDoDung" value="30000">Phao
+                                    </div>
+                                </div>
+                                <div class="row p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <input type="checkbox" class="chkDoDung" name="chkDoDung" value="40000">Kinh boi
+                                    </div>
+                                </div>
+                                
+                                <div class="row p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Tien do dung:</label>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <input type="text" id="txtDD" name="txtDD" class="form-control" value="0" disabled>
+                                    </div>
+                                </div>
+                                <div class="row form-group p-1">
+                                    <div class="col-4 col-sm-3">
+                                        <label for="">Tổng tiền:</label>
+                                    </div>
+                                    <div class="col-8 col-sm-6">
+                                        <input type="text" id="tong" class="form-control" value="0" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="row p-1">
+                                    <div class="col-sm-6">
+
+                                        <input type="button" value="Thanh Toan" id="btnSave" class="btn btn-success btn-block">
+                                    </div>
+                                    <div class="col-sm-6">
+
+                                        <input type="reset" value="Huy" class="btn btn-danger btn-block">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <h4>TRANG THANH TOAN</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-md-4">
+                <h6>Ma sinh vien:_______</h6>
+            </div>
+            <div class="col-4 col-md-4">
+                <h6>Ho ten SV: ___________</h6>
+            </div>
+            <div class="col-4 col-md-4">
+                <h6>Phong thi:______________</h6>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        var i= 2;
+        $("#btnDK").click(function() {
+            $("#myModal").modal();
+        })
+
+        // kiem tra ma
+        function kiemTraMa() {
+            var kt = /[0-9]{9}$/;
+            if (kt.test($("#txtMa").val()) ==""){
+                $("#tbMa").html("bat buoc nhap");
+                $("#tbMa").addClass("mauDo");
+            }   else {
+                $("#tbMa").html("Nhap sai");
+                $("#tbMa").addClass("mauDo");
+            }
+        }
+        $("#txtMa").blur(kiemTraMa);
+
+        // kiem tra ho ten
+        function kiemTraHoTen() {
+            var kt = /^[A-Z][a-z]+(\s[A-Z][a-z]*)+$/;
+            if ($("#txtHT").val() == ""){
+                $("#tbHT").html("Nhap SAI")
+                $("#tbHT").addClass("mauDo");
+                return false;
+            }
+            if (!kt.test($("#txtHT").val())){
+                $("#tbHT").html("Chu cai dau phai viet hoa")
+                $("#tbHT").addClass("mauDo");
+                return false;
+            }
+            $("#tbHT").html("*");
+            return true;
+        }
+        $("#txtHT").blur(kiemTraHoTen);
+
+        //kiem tra emial
+        function kiemTraEmail() {
+            var kt = /^[a-zA-z0-9._-]+@(gmail\.com|email\.com)$/;
+            if ($("#txtDC").val() =="") {
+                $("#tbDC").html("Bat buoc nhap");
+                $("#tbDC").addClass("mauDo");
+                return false;
+            }
+            if (!kt.test($("#txtDC").val())){
+                $("#tbDC").html("Nhap sai");
+                $("#tbDC").addClass("mauDo");
+                return false;
+            }
+            $("#tbDC").html("*");
+            return true;
+        }
+        $("#txtDC").blur(kiemTraEmail);
+
+        $(document).ready(function() {
+            // Tính tổng đồ dùng
+            function calculateEquipmentTotal() {
+                let total = 0;
+                $(".chkDoDung:checked").each(function() {
+                    total += parseInt($(this).val());
+                });
+                $("#txtDD").val(total); // Cập nhật tổng tiền đồ dùng vào ô txtDD
+                calculateTotal(); // Cập nhật tổng tiền
+            }
+
+            // Cập nhật giá dịch vụ khi thay đổi
+            $("#slGia").change(function() {
+                var selectedValue = parseInt($(this).val());
+                $("#txtDV").val(selectedValue); // Cập nhật giá dịch vụ
+                calculateTotal(); // Cập nhật tổng tiền
+            });
+
+            // Tính tổng tiền (dịch vụ + đồ dùng)
+            function calculateTotal() {
+                var servicePrice = parseInt($("#txtDV").val()) || 0;
+                var equipmentTotal = parseInt($("#txtDD").val()) || 0;
+                var total = servicePrice + equipmentTotal;
+                $("#tong").val(total); // Cập nhật tổng tiền vào ô tổng
+            }
+
+            // Gọi hàm tính tổng đồ dùng khi có thay đổi trong checkbox
+            $(".chkDoDung").change(calculateEquipmentTotal);
+        });
+
+
+
+        $("#btnSave").click(function() {
+            var ma = $("#txtMa").val();
+            var ht = $("#txtHT").val();
+            var dc = $("#txtDC").val();
+            var tdv = $("#txtDV").val();
+            var tdd = $("#txtDD").val();
+            var tong = $("#txtTong").val();
+            var them = "<tr><td>" +(i++)+"</td><td>"+ma+"</td><td>"+ht+"</td><td>"+dc+"</td><td>"+tdv+"</td><td>"+tdd+"</td><td>"+tong+"</td></tr>";
+            $("#tbDanhSach").append(them);
+            $("#myModal").modal("hide");
+            return true
+        })
+
+    });
+</script>
+</html>
