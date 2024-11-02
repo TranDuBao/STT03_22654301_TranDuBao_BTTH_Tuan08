@@ -17,7 +17,7 @@
     <div class="container border">
         <div class="row">
             <div class="col-12">
-                <img src="/img/anh1.png" alt="" width="100%">
+                <img src="../img/anh1.png" alt="" width="100%">
             </div>
         </div>
         <div class="row">
@@ -136,7 +136,7 @@
                                         <input type="checkbox" class="chkDoDung" name="chkDoDung" value="30000">Phao
                                     </div>
                                 </div>
-                                <div class="row p-1">
+                                <div class="row p-1">   
                                     <div class="col-4 col-sm-3">
                                         <label for=""></label>
                                     </div>
@@ -204,7 +204,7 @@
 
         // kiem tra ma
         function kiemTraMa() {
-            var kt = /[0-9]{9}$/;
+            var kt = /^[0-9]{9}$/;
             if (kt.test($("#txtMa").val()) ==""){
                 $("#tbMa").html("bat buoc nhap");
                 $("#tbMa").addClass("mauDo");
@@ -232,6 +232,9 @@
             return true;
         }
         $("#txtHT").blur(kiemTraHoTen);
+
+
+
 
         //kiem tra emial
         function kiemTraEmail() {
